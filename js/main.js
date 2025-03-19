@@ -7,13 +7,13 @@ let timeLeft = 30;
 let isGameActive = false;
 let gameInterval, timerInterval;
 
-const clickSoundSrc = "https://github.com/xPickeringx/aim-trainer/assets/audio/disparo.mp3";
-const hitSoundSrc = "https://github.com/xPickeringx/aim-trainer/assets/audio/punto.mp3";
+const clickSoundSrc = "../aim-trainer/assets/audio/disparo.mp3";
+const hitSoundSrc = "../aim-trainer/assets/audio/punto.mp3";
 
 let clickSound, hitSound;
 
 let targetImage = new Image();
-targetImage.src = 'https://github.com/xPickeringx/aim-trainer/assets/visual/objetivo.jpg';
+targetImage.src = '../aim-trainer/assets/visual/objetivo.jpg';
 
 // Mostrar el modal de reglas al cargar la página
 window.onload = function() {
