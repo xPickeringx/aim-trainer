@@ -7,13 +7,13 @@ let timeLeft = 30;
 let isGameActive = false;
 let gameInterval, timerInterval;
 
-const clickSoundSrc = "assets/audio/disparo.mp3";
-const hitSoundSrc = "assets/audio/punto.mp3";
+const clickSoundSrc = "./assets/audio/disparo.mp3";
+const hitSoundSrc = "./assets/audio/punto.mp3";
 
 let clickSound, hitSound;
 
 let targetImage = new Image();
-targetImage.src = '/assets/visual/objetivo.jpg';
+targetImage.src = './assets/visual/objetivo.jpg';
 
 // Mostrar el modal de reglas al cargar la página
 window.onload = function() {
