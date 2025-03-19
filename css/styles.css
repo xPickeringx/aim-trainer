@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Fondo mejorado con estilo oscuro y detalles */
+body {
+  background: url('/assets/visual/fondoJuego.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  color: #e6f0ff; /* Colores claros y futuristas */
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Título con tipografía gamer y efectos de neón */
+.game-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(239, 209, 12, 0.8), 0 0 20px rgba(234, 153, 13, 0.8);
+  color: #ffffff; /* Verde neón */
+}
+
+/* Canvas con bordes neón y efectos */
+canvas {
+  background-image: url("/assets/visual/fondoJuego.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #00FF00; /* Borde neón */
+  border-radius: 15px;
+  cursor: crosshair;
+  box-shadow: 0 0 30px rgba(249, 10, 217, 0.6); /* Resplandor verde */
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+canvas:hover {
+  transform: scale(1.05); /* Efecto al pasar el cursor */
+}
+
+/* Barra de estadísticas con más estilo */
+.scoreboard {
+  font-size: 1rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(80, 93, 240, 0.5);
+}
+
+/* Estilos de la nueva sección de reglas y leaderboard */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.rules, .leaderboard {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(80, 93, 240, 0.5);
+  width: 45%;
+  color: #e6f0ff;
+}
+
+.rules h4, .leaderboard h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rules ul {
+  font-size: 1rem;
+}
+
+.leaderboard ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.leaderboard li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #00ff00;
+}
+
+/* Animación mejorada para los objetivos */
+@keyframes targetAnimation {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.target {
+  animation: targetAnimation 0.5s ease-in-out infinite;
+}
+.btn-custom {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, rgb(230, 0, 255) 0%, rgba(0,255,255,1) 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(212, 124, 228, 0.8);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, rgba(0,255,255,1) 0%, rgb(199, 123, 234) 100%);
+  box-shadow: 0 0 30px rgb(166, 129, 234);
+}
+/* Botón con neón */
+#startGame {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, rgb(230, 0, 255) 0%, rgba(0,255,255,1) 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(212, 124, 228, 0.8);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+#startGame:hover {
+  background: linear-gradient(135deg, rgba(0,255,255,1) 0%, rgb(199, 123, 234) 100%);
+  box-shadow: 0 0 30px rgb(166, 129, 234);
+}
+
+/* Estilos del modal */
+.modal-content {
+  background-color: rgb(0, 0, 0);
+  color: #000000;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.modal-header {
+  border-bottom: 1px solid #ff0000;
+}
+
+.modal-title {
+  color: #ff0000;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+}
+
+.modal-footer {
+  background-color: #333;
+}
+
+
+
+/* Ajustes para el leaderboard al lado derecho */
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.col-md-8 {
+  flex: 0 0 65%;
+}
+
+.col-md-4 {
+  flex: 0 0 30%;
+  margin-left: 20px; /* Espacio entre el juego y el leaderboard */
+}
+
+.leaderboard {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(80, 93, 240, 0.5);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#leaderboardList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+/* Estilo para el footer */
+.footer {
+  background-color: #333;
+  color: #e6f0ff;
+  padding: 20px 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.footer a {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
